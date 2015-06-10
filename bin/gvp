@@ -40,8 +40,8 @@ case "${1:-"in"}" in
     ln -snf .godeps/bin bin
 
     GVP_DIR="$(pwd)/.godeps"
-    GOBIN="$GVP_DIR/bin"
-    GOPATH="$GVP_DIR:$PWD:$GOPATH"
+    GOBIN="$PWD/bin"
+    GOPATH="$PWD:$GVP_DIR"
     PATH="$GOBIN:$PATH"
 
     export GOBIN GOPATH GVP_NAME PATH
